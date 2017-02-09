@@ -64,6 +64,9 @@ class FakeGithub {
           throwError(404);
         }
       },
+      'integrations.getInstallationRepositories': async() => {
+        return [{repositories: [{name:'rrr'}, {name:'ttt'}]}];
+      },
     };
 
     const debug = Debug('FakeGithub');
